@@ -2,6 +2,7 @@
 
 
 @import url("@angular/material/prebuilt-themes/azure-blue.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
