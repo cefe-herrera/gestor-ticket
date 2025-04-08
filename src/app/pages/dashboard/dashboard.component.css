@@ -18,7 +18,7 @@
   min-width: 250px;          /* Ancho mínimo para que no se encoja demasiado en dispositivos pequeños */
   display: flex;
   flex-direction: column;
-  max-height: 90%;          /* Asegura que no se desborde verticalmente */
+  max-height: 100%;          /* Asegura que no se desborde verticalmente */
 }
 
 /* Título de cada columna */

@@ -27,7 +27,9 @@ export class DashboardComponent {
 
   ngOnInit(): void {
     // Cargamos las columnas y tickets desde el servicio
-    this.columns = this.ticketService.getColumns();
+    this.ticketService.columns$.subscribe(cols => {
+      this.columns = cols;
+    });
   }
    // Definimos las columnas y los tickets de ejemplo
 
