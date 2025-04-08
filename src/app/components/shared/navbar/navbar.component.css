@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-btn {
+    margin-right: 8px;
+  }
+  
+  .app-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Opcional: estilos para los enlaces del nav */
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 8px;
+  }
+  
+  .active-link {
+    border-bottom: 2px solid white;
+  }
+  
