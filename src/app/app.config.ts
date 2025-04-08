@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { routes } from './app.routes';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,5 +22,7 @@ export const appConfig: ApplicationConfig = {
     MatButtonModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    DragDropModule
+
   ]
 };

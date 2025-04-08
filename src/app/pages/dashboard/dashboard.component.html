@@ -1,0 +1,23 @@
+<div class="board-container" cdkDropListGroup>
+    <!-- Iteramos sobre cada columna asignándole un índice -->
+    <div class="board-column" *ngFor="let column of columns; let i = index">
+      <h3>{{ column.title }}</h3>
+      <!-- Cada columna tendrá un contenedor de DropList con un ID único y conexión a las demás listas -->
+      <div
+        cdkDropList
+        [id]="'drop-list-' + i"
+        [cdkDropListData]="column.tickets"
+        [cdkDropListConnectedTo]="getConnectedDropLists(i)"
+        class="ticket-list"
+        (cdkDropListDropped)="drop($event)">
+        <!-- Iteramos sobre cada ticket y lo hacemos draggable -->
+        <div class="ticket-card" *ngFor="let ticket of column.tickets" cdkDrag>
+          <mat-card class="ticket-card-content">
+            <mat-card-title>{{ ticket.title }}</mat-card-title>
+            <mat-card-content>{{ ticket.description }}</mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
