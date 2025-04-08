@@ -1,0 +1,39 @@
+/* Estilo de la tarjeta; con cursor move para indicar que se puede arrastrar */
+.ticket-card-content {
+    cursor: move;
+  }
+  
+.ticket-card-content {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Ajustar el título de la card */
+  .ticket-card-content .mat-card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  /* Estilos para el contenido de la card */
+  .ticket-card-content .mat-card-content {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Estilos para el contenedor de acciones */
+  .ticket-card-content .mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  
+  /* Separar un poco los botones entre sí */
+  .ticket-card-content .mat-card-actions button {
+    margin-left: 8px;
+  }
+  

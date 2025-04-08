@@ -1,0 +1,11 @@
+<mat-card class="ticket-card-content">
+    <mat-card-title>{{ ticket.title }}</mat-card-title>
+  <mat-card-content>
+    {{ ticket.description }}
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-mini-fab color="accent" class="mx-2" (click)="onEdit()"> <mat-icon>edit</mat-icon></button>
+    <button mat-mini-fab color="warn" (click)="onDelete()"> <mat-icon>delete</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
+

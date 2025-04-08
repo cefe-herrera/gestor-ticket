@@ -12,10 +12,7 @@
         (cdkDropListDropped)="drop($event)">
         <!-- Iteramos sobre cada ticket y lo hacemos draggable -->
         <div class="ticket-card" *ngFor="let ticket of column.tickets" cdkDrag>
-          <mat-card class="ticket-card-content">
-            <mat-card-title>{{ ticket.title }}</mat-card-title>
-            <mat-card-content>{{ ticket.description }}</mat-card-content>
-          </mat-card>
+          <app-card [ticket]="ticket"></app-card>
         </div>
       </div>
     </div>

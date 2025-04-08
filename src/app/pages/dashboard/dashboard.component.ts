@@ -4,13 +4,15 @@ import { Column } from '../../model/column.model';
 import { Ticket } from '../../model/ticket.model';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from '../../components/card/card.component';
+import { TicketService } from '../../services/ticket.service';
 
 
 @Component({
   selector: 'app-dashboard',
   imports: [
     CommonModule,
-    MatCard,
+    CardComponent,
     MatCardModule,
     DragDropModule
   ],
@@ -18,29 +20,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  
+  columns: Column[] = [];
 
+  constructor(private ticketService: TicketService) { }
+
+  ngOnInit(): void {
+    // Cargamos las columnas y tickets desde el servicio
+    this.columns = this.ticketService.getColumns();
+  }
    // Definimos las columnas y los tickets de ejemplo
-   columns: Column[] = [
-    {
-      title: 'Pendiente',
-      tickets: [
-        { id: 1, title: 'Ticket 1', description: 'Revisar el código del módulo X' },
-        { id: 2, title: 'Ticket 2', description: 'Solucionar error en login' }
-      ]
-    },
-    {
-      title: 'En Progreso',
-      tickets: [
-        { id: 3, title: 'Ticket 3', description: 'Implementar nueva funcionalidad Y' }
-      ]
-    },
-    {
-      title: 'Completado',
-      tickets: [
-        { id: 4, title: 'Ticket 4', description: 'Realizar pruebas unitarias del servicio Z' }
-      ]
-    }
-  ];
 
   getConnectedDropLists(currentIndex: number): string[] {
     return this.columns
